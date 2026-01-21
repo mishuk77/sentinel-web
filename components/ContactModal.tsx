@@ -36,28 +36,22 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
         const ACCESS_KEY = "5cf1ebb2-47d5-4e07-bc91-b29d341c3e60";
 
         try {
-            if (ACCESS_KEY === "5cf1ebb2-47d5-4e07-bc91-b29d341c3e60") {
-                // Simulation mode for demo purposes
-                await new Promise((resolve) => setTimeout(resolve, 1000));
-                console.warn("Simulating submission. Please add your Web3Forms Access Key.");
-            } else {
-                const res = await fetch("https://api.web3forms.com/submit", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Accept: "application/json",
-                    },
-                    body: JSON.stringify({
-                        access_key: ACCESS_KEY,
-                        ...data,
-                        subject: "New Sentinel Contact Request",
-                    }),
-                });
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: ACCESS_KEY,
+                    ...data,
+                    subject: "New Sentinel Contact Request",
+                }),
+            });
 
-                const result = await res.json();
-                if (!result.success) {
-                    throw new Error(result.message || "Something went wrong");
-                }
+            const result = await res.json();
+            if (!result.success) {
+                throw new Error(result.message || "Something went wrong");
             }
 
             setIsSuccess(true);
