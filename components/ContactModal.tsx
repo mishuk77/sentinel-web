@@ -112,7 +112,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                             </label>
                             <input
                                 {...register("firstName", { required: true })}
-                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400"
+                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400 text-charcoal"
                                 placeholder="Enter your first name"
                             />
                             {errors.firstName && <span className="text-xs text-red-500">First name is required</span>}
@@ -124,7 +124,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                             </label>
                             <input
                                 {...register("lastName", { required: true })}
-                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400"
+                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400 text-charcoal"
                                 placeholder="Enter your last name"
                             />
                             {errors.lastName && <span className="text-xs text-red-500">Last name is required</span>}
@@ -136,7 +136,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                             </label>
                             <input
                                 {...register("jobTitle", { required: true })}
-                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400"
+                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400 text-charcoal"
                                 placeholder="Enter your job title"
                             />
                             {errors.jobTitle && <span className="text-xs text-red-500">Job title is required</span>}
@@ -148,7 +148,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                             </label>
                             <input
                                 {...register("company", { required: true })}
-                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400"
+                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400 text-charcoal"
                                 placeholder="Enter your company name"
                             />
                             {errors.company && <span className="text-xs text-red-500">Company is required</span>}
@@ -163,7 +163,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                                     required: true,
                                     pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
                                 })}
-                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400"
+                                className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-1 focus:ring-accent focus:border-accent outline-none transition-all placeholder:text-gray-400 text-charcoal"
                                 placeholder="Enter your work email address"
                             />
                             {errors.email && <span className="text-xs text-red-500">Valid email is required</span>}
